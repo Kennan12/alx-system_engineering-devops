@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# This script is displaying "Best School" 10 times.
+
+Count=1
+while [ $Count -lt 11 ]
+do
+	if [ $Count = 4 ]
+	then
+		echo "bad luck"
+	elif [ $Counter = 8 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	let Count+=1
+done
