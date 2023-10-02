@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+# Superstitious numbers.
+
+Count=1
+
+while [ "$Count" -lt 21 ]
+do
+
+	case "$Count" in
+		4)
+			echo "$Count"
+			echo "bad luck from China"
+			;;
+		9)
+			echo "$Count"
+			echo "bad luck from Japan"
+			;;
+		17)
+			echo "$Count"
+                        echo "bad luck from Italy"
+			;;
+		*)
+			echo "$Count"
+			;;
+	esac
+
+	((Count++))
+done
