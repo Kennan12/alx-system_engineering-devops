@@ -11,7 +11,7 @@ do
 	elif ! (( i % 3 ))
 	then
 		echo "Fizz"
-	elif (( i % 5 ))
+	elif ! (( i % 5 ))
 	then
 		echo "Buzz"
 	else
