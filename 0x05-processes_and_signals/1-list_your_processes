@@ -1,0 +1,5 @@
+#!/usr/bin/env bash
+# List all my currently running procces
+
+# source: https://linuxize.com/post/ps-command-in-linux/
+ps -auxf
