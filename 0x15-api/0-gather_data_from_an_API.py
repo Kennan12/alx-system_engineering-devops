@@ -15,7 +15,7 @@ if __name__ == "__main__":
     r_for_users = requests.get(URL_FOR_USERS)
     r_for_todos = requests.get(URL_FOR_TODOS)
 
-    name = r_for_users.json().get('name')
+    user = r_for_users.json().get('user')
     todos = r_for_todos.json()
     for todo in todos:
         if todo.get("userId") == int(sys.argv[1]):
