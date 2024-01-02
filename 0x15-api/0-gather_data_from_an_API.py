@@ -11,7 +11,7 @@ if __name__ == "__main__":
     ALL_TASKS = 0
 
     URL_FOR_USERS = "https://jsonplaceholder.typicode.com/users/{0}".\
-            format(sys.argv[1])
+        format(sys.argv[1])
     URL_FOR_TODOS = "https://jsonplaceholder.typicode.com/todos"
     R_FOR_USERS = requests.get(URL_FOR_USERS)
     R_FOR_TODOS = requests.get(URL_FOR_TODOS)
@@ -25,7 +25,7 @@ if __name__ == "__main__":
                 and (todo.get("completed")):
             DONE_TASKS += 1
     print("Employee {} is done with tasks({}/{}:".
-            format(user, DONE_TASKS, ALL_TASKS))
+        format(user, DONE_TASKS, ALL_TASKS))
     for todo in todos:
         if (todo.get("userId") == int(sys.argv[1]))\
                 and (todo.get('completed')):
