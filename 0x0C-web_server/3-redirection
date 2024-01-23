@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# performing a 301 Moved Permanently
+
+sudo apt-get update
+sudo apt-get install -y nginx
+echo "Hello world!" | sudo tee /var/www/html/index.html
+
+string_for_replacement="server_name _;\trewrite ^\/redirect_me https:\/\/github.com\/Kennan12 permanent;"
+
+sudo sed -i "s/server_name _;/$string_for_replacement/" /etc/nginx/sites-enabled/default
+
+sudo service nginx restart
