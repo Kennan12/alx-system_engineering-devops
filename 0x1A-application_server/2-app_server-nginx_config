@@ -3,14 +3,14 @@ server {
         listen [::]:80 ipv6only=on default_server;
 	server_name localhost;
 	
-	root/var/www/html;
+	root /var/www/html;
 
 	location /hbnb_static/ {
 		alias /data/web_static/current/;
 		autoindex off;
 	}
 
-	index index.html index.html index.nginx-debian.html;
+	index index.html index.htm index.nginx-debian.html;
 	rewrite ^/redirect_me https://github.com/Kennan12 permanent;
 	
 	error_page 404 /404.html;
@@ -20,7 +20,7 @@ server {
 		internal;
 	}
 
-	location = /airbnb-onepage/ {
+	location /airbnb-onepage/ {
 		include proxy_params;
 		proxy_pass http://0.0.0.0:5000/airbnb-onepage/;
 	}
