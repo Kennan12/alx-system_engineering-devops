@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# usage: ./1-world_wide_web <domain> <subdomain>
+
+domain_information() {
+  dig $1 | grep -A1 "ANSWER SECTION:" | tr '\t' '\n' | tail -2 | tr '\n' ' '
+}
